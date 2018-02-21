@@ -21,8 +21,8 @@
 
 				<form id="todoForm">
             		<input type="text" id="taskInput">
-            		<button type="button" class="waves-effect waves-light btn-large" >Add task</button>
-            		<button type="button" class="waves-effect waves-light btn-large" >Reset</button>
+            		<button type="button" class="waves-effect waves-light btn-large" onclick="todoList()" >Add task</button>
+            		<button type="button" class="waves-effect waves-light btn-large" onclick="resetList()" >Reset</button>
         		</form>
 		
 			<div class="row">
@@ -38,7 +38,7 @@
 			<div class="col-md-6 completedList">	
 					<h2>Completed List</h2>
 				</div>
-				<button type="button" class="waves-effect waves-light btn-large">Reset</button>
+				<button type="button" class="waves-effect waves-light btn-large" onclick="resetCompleteList()">Reset</button>
 
     			<div class="row">
 					<div class="todoList">
