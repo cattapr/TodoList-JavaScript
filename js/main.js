@@ -15,8 +15,7 @@ function todoList() {
     span.className = "close";
     var button = document.createElement("button");
     var textButton = document.createTextNode("\u2713");
-    button.className = "done";
-    
+    button.className = "done";    
  
     // Remove list when click on delete button   
     span.onclick = function() { 
@@ -52,6 +51,14 @@ function todoList() {
 } //function todolist () ends here.
 
 
+ var input = document.getElementById("taskInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addTaskButton").click();
+    }
+});
+
 
 //    Reset List
 function resetList() {        
@@ -65,6 +72,7 @@ function resetCompleteList() {
     completeList.innerHTML = "";
 
 }
+
 
 //Current date format
 function renderTime () {
