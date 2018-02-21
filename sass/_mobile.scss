@@ -2,38 +2,102 @@ body {
 	margin: 0;
 	padding: 0;
 }
-h1,h2 {
-	width: 100%;
-	margin: 40px auto;
-	padding: 10px;
-	font-family: 'Pacifico', cursive;
-	text-align: center;
-	color: black;
-	background: rgba(4, 179, 237, 0.65);
-	border:2px solid black;
-	border-radius: 20px;
 
+.wrapper {
+	min-height:1200px;
 }
 
 
+.hero {
+	background-image: url("../images/heroimage.png");
+	height: 250px;
+	background-size: cover;
+}
 
-form {
+h2, h3 {
+	font-family: 'Pacifico', cursive;
+	margin-left: 20px;
+
+}
+
+h1 {
+    padding-top: 60px;
+    padding-left: 50px;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.time {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.fa-tasks, .fa-thumbtack {
+	margin-right: 10px;
+}
+
+ul {
+list-style: none;
+width: 900px;
+margin-top: 20px;
+}
+
+li {
+	border-bottom: 1px solid black;
+	margin-top: 10px;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.2em 0.8em;
+}
+
+.done {
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.2em 0.8em;
+}
+
+
+.close {
+	color: black;
+}
+#todoForm {
+	text-align: center;
 	width: 90%;
 	margin: 10px auto;
-	
+}
 
+
+input {
+	width: 300px;
+}
+.todo {
+	min-height: 500px;
+	margin-bottom: 20px;
+}
+
+.completedList {
+	background-color: rgba(65, 48, 135, 0.6);
+	min-height: 500px;
+	margin-bottom: 20px;
+	border-top: 2px solid;
 }
 
 
 footer {
 	height: 50px;
 	padding-top: 10px;
-	background-color: rgba(141, 169, 178, 0.8);
+	background-color: rgb(44, 43, 48);
 }
 
 footer a {
 	color:white;
 	margin:10px;
 	font-size: 18px;
-	padding-left: 600px;
+	padding-left: 450px;
 }

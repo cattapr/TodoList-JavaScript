@@ -3,26 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Todo list</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
 
 <body>
+	<div class="wrapper">
+
+	<nav>
+		<div class="hero">
+			<h1> Your things </h1>
+			<div id="clockDisplay" class="time">
+			</div>
+		</div>
+	</nav>
+
 	<main>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6 todo">
-					<h1>Todo List</h1>
-				<form id="todoForm">
+				<div class="col-xs-12 col-md-6 todo">
+					<form id="todoForm">
             		<input type="text" id="taskInput">
             		<button type="button" class="waves-effect waves-light btn-large" onclick="todoList()" >Add task</button>
             		<button type="button" class="waves-effect waves-light btn-large" onclick="resetList()" >Reset</button>
         		</form>
-		
+					<h2><i class="fas fa-thumbtack fa-1x"></i>Todos</h2>
 				<div class="row">
 		    		<div class="todoList">
 		    			<ul id="todoList">
@@ -30,31 +40,30 @@
 		   				</ul>
 					</div> <!--stänge todoList-->
 				</div><!--stänger row till todoList-->
-			</div> <!--stänger todo-->
-
-			<div class="col-md-6 completedList">	
-				<h2>Completed List</h2>
-			</div>
+				</div><!--stänger todo-->
 			
-			<button type="button" class="waves-effect waves-light btn-large" onclick="resetCompleteList()">Reset</button>
-
+			<div class="col-xs-12 col-md-6 completedList">	
+				<h3><i class="fas fa-tasks fa-1x"></i>Completed List</h3>
+				<button type="button" class="waves-effect waves-light btn-large" onclick="resetCompleteList()">Reset</button>
+			
 			<div class="row">
-				<div class="allCompletedList">
 			        <ul id="completeList">
 
 			        </ul>
-			    </div><!--stänger todoList-->
-			</div><!--stänger row-->
-
+			   
+			</div>
 			</div><!--stänger completedList-->
 
-			</div><!--stänger första row-->
+			</div><!--stänger row-->
 		</div> <!--stänger container-->
-	</main> <!--stänger main-->
 
-<footer>
- 	<a href="https://github.com/cattapr/todolist">My github</a>
-</footer>
+		</main> <!--stänger main-->
+</div><!--stänger wrapper-->
+
+	<footer>
+		<a href="https://github.com/cattapr/todolist">My github</a>
+	</footer>
+
 
 
 <!--link to javaScript file-->
