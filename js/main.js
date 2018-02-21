@@ -14,6 +14,12 @@ function todoList() {
     var textSpan = document.createTextNode("\u00D7");
     span.className = "close";
     
+    // Remove list when click on delete button   
+    span.onclick = function() { 
+      var div = this.parentElement;
+      list.removeChild(div);
+  }
+
 
 	  // Appending to HTML
 	  newItem.appendChild(span);
