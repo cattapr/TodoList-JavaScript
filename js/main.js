@@ -6,13 +6,21 @@ var completeList = document.getElementById("completeList");
 // Create list Item from input value and create List
 function todoList() {   
     var item = document.getElementById("taskInput").value;
-    var text = document.createTextNode(item);   
+    var textItem = document.createTextNode(item);   
     var newItem = document.createElement("li");
 
- 	
+ 	// Create Delete and Check buttons  
+    var span = document.createElement("SPAN");
+    var textSpan = document.createTextNode("\u00D7");
+    span.className = "close";
+    
 
-  newItem.appendChild(text);   
-  list.appendChild(newItem); 
+	  // Appending to HTML
+	  newItem.appendChild(span);
+	  span.appendChild(textSpan); 
+
+	  newItem.appendChild(textItem);   
+	  list.appendChild(newItem); 
 
 
 } //function todolist () ends here.
