@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Todo list</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 todo">
+					<h1>Todo List</h1>
+		
+
+				<form id="todoForm">
+            		<input type="text" id="taskInput">
+            		<button type="button" class="waves-effect waves-light btn-large" >Add task</button>
+            		<button type="button" class="waves-effect waves-light btn-large" >Reset</button>
+        		</form>
+		
+			<div class="row">
+	    		<div class="todoList">
+	    			<ul id="todoList">
+
+	   				</ul>
+				</div> <!--stänge todoList-->
+
+			</div><!--stänger row till todoList-->
+			</div> <!--stänger todo-->
+
+			<div class="col-md-6 completedList">	
+					<h2>Completed List</h2>
+				</div>
+				<button type="button" class="waves-effect waves-light btn-large">Reset</button>
+
+    			<div class="row">
+					<div class="todoList">
+				        <ul id="completeList">
+
+				        </ul>
+				    </div><!--stänger todoList-->
+				</div><!--stänger row-->
+
+			</div><!--stänger completedList-->
+
+			</div><!--stänger första row-->
+		</div> <!--stänger container-->
+	</main> <!--stänger main-->
+
+<footer>
+ 	<a href="https://github.com/cattapr/todolist">My github</a>
+</footer>
+
+
+<!--link to javaScript file-->
+<script src="js/main.js"></script>
+
+<!--Bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+
+</html>
