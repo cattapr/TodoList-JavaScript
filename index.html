@@ -17,36 +17,34 @@
 			<div class="row">
 				<div class="col-md-6 todo">
 					<h1>Todo List</h1>
-		
-
 				<form id="todoForm">
             		<input type="text" id="taskInput">
             		<button type="button" class="waves-effect waves-light btn-large" onclick="todoList()" >Add task</button>
             		<button type="button" class="waves-effect waves-light btn-large" onclick="resetList()" >Reset</button>
         		</form>
 		
-			<div class="row">
-	    		<div class="todoList">
-	    			<ul id="todoList">
+				<div class="row">
+		    		<div class="todoList">
+		    			<ul id="todoList">
 
-	   				</ul>
-				</div> <!--stänge todoList-->
-
-			</div><!--stänger row till todoList-->
+		   				</ul>
+					</div> <!--stänge todoList-->
+				</div><!--stänger row till todoList-->
 			</div> <!--stänger todo-->
 
 			<div class="col-md-6 completedList">	
-					<h2>Completed List</h2>
-				</div>
-				<button type="button" class="waves-effect waves-light btn-large" onclick="resetCompleteList()">Reset</button>
+				<h2>Completed List</h2>
+			</div>
+			
+			<button type="button" class="waves-effect waves-light btn-large" onclick="resetCompleteList()">Reset</button>
 
-    			<div class="row">
-					<div class="todoList">
-				        <ul id="completeList">
+			<div class="row">
+				<div class="allCompletedList">
+			        <ul id="completeList">
 
-				        </ul>
-				    </div><!--stänger todoList-->
-				</div><!--stänger row-->
+			        </ul>
+			    </div><!--stänger todoList-->
+			</div><!--stänger row-->
 
 			</div><!--stänger completedList-->
 
