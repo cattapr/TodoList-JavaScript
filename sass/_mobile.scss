@@ -1,4 +1,8 @@
 
+body {
+margin: 0;
+padding: 0;
+}
 
 .wrapper {
 	min-height:1200px;
@@ -25,8 +29,13 @@ h1 {
 }
 
 .time {
-    padding-top: 100px;
+    padding-top: 135px;
     padding-left: 50px;
+}
+
+#clockDisplay {
+	color: white;
+	font-weight: bold;
 }
 
 .fa-tasks, .fa-thumbtack {
@@ -35,25 +44,32 @@ h1 {
 
 ul {
 list-style: none;
-width: 900px;
 margin-top: 20px;
 }
 
 li {
 	border-bottom: 1px solid black;
+	padding-top:10px;
 	margin-top: 10px;
+	font-size: 1.2em;
 }
 
 button {
   background: none;
-  border: 2px solid;
+  border: 1px solid rgba(179,204,255, 0.8);
+  border-radius: 5px;
   line-height: 1;
   margin: 0.5em;
-  padding: 0.3em 0.8em;
+  padding: 0.4em 0.8em;
 }
 
-#addTaskButton, #resetButton, #completeReset {
-	border: 1px solid rgb(44, 43, 48);
+#addTaskButton, #resetButton {
+	background-color: rgba(179,204,255, 0.5);
+}
+
+#completeReset {
+	border: 1px solid rgba(179,204,255, 0.8);
+  	border-radius: 5px;
 	background-color: white;
 }
 
@@ -77,32 +93,40 @@ button {
 
 input {
 	width: 300px;
+	height: 30px;
 	border: 1px solid;
 }
 
+.todoList, .completeList {
+	width: 90%;
+}
 
 .todo {
 	min-height: 500px;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .completedList {
-	background-color: rgba(65, 48, 135, 0.6);
+	background-color: rgb(179,204,255);
 	min-height: 500px;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 	border-top: 2px solid;
 }
 
 
 footer {
-	height: 50px;
+	height: 80px;
 	padding-top: 10px;
 	background-color: rgb(44, 43, 48);
 }
 
+.githubLink {
+	text-align: center;
+	padding-top: 10px;
+}
+
 footer a {
 	color:white;
-	margin:10px;
-	font-size: 18px;
-	padding-left: 450px;
+	font-size: 1.8em;
 }
