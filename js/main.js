@@ -90,7 +90,10 @@ function todoList() {
 
   }
 
-	  // Appending to HTML
+	// Appending to HTML
+  if (item === '') {
+    alert("You must write something!");
+	} else {
 	  newItem.appendChild(span);
 	  span.appendChild(textSpan); 
 
@@ -99,7 +102,7 @@ function todoList() {
 
 	  newItem.appendChild(textItem);   
 	  list.appendChild(newItem); 
-
+	}	 
 
 } //function todolist () ends here.
 
@@ -119,13 +122,6 @@ function resetCompleteList() {
 
 
 
- /*var input = document.getElementById("taskInput");
-input.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addTaskButton").click();
-    }
-});*/
 
 
 
