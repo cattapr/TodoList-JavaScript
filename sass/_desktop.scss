@@ -1,0 +1,27 @@
+//---Hero---/
+.hero {
+	height: 500px;
+
+	h1 {
+		font-size: 5em;
+	}
+
+	.time {
+		padding-top: 180px;
+	}
+}
+
+
+//---Lists---//
+
+.completedList {
+	min-height: 800px;
+	border: none;
+
+	#completeReset {
+		margin-top: 38px;
+	}
+}
+
+
+

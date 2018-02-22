@@ -1,7 +1,13 @@
 /*---Typography---*/
-
-$caveat: 'Caveat', cursive;
-$pacifico: 'Pacifico', cursive;
+$oswald: 'Oswald', sans-serif;
+$playfair: 'Playfair Display', serif;
 
 
 /*---Colors---*/
+$black: rgb(0,0,0);
+$white: rgb(255,255,255);
+$completeListColor: rgb(179,204,255);
+$footerColor:rgb(44, 43, 48);
+$buttonsColor: rgba(179,204,255, 0.5);
+$buttonBorderStyle: 1.2px solid black;
+$buttonRadius: 5px;

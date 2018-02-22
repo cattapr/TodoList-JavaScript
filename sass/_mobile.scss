@@ -1,3 +1,4 @@
+//----Basics----// 
 
 body {
 margin: 0;
@@ -9,68 +10,108 @@ padding: 0;
 }
 
 
-.hero {
-	background-image: url("../images/heroimage.jpg");
-	height: 350px;
-	background-size: cover;
-}
-
+//----Basic fonts---//
 h2, h3 {
-	font-family: 'Oswald', sans-serif;
+	font-family: $oswald;
 	margin-left: 20px;
+	font-size: 3em;
 
 }
 
 h1 {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-left: 50px;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
 }
 
+ul {
+	list-style: none;
+	margin-top: 20px;
+}
+
+li {
+	border-bottom: 1px solid $black;
+	padding-top:10px;
+	margin-top: 10px;
+	font-size: 1.2em;
+	font-family: $playfair;
+	text-transform: uppercase;
+}
+
+
+//-----Hero-----//
+
+.hero {
+	background-image: url("../images/heroimage.jpg");
+	height: 450px;
+	background-size: cover;
+}
+
 .time {
-    padding-top: 135px;
+    padding-top: 150px;
     padding-left: 50px;
 }
 
 #clockDisplay {
-	color: white;
+	color: $white;
 	font-weight: bold;
+	font-size: 1.2em;
 }
 
+
+//----Input form----//
+#todoForm {
+	text-align: center;
+	width: 90%;
+	margin: 10px auto;
+
+		input {
+	width: 300px;
+	height: 40px;
+	border: 1px solid;
+	}
+}
+
+
+//-----Buttons-----//
+button {
+  border: $buttonBorderStyle;
+  border-radius: $buttonRadius;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.8em 1em;
+  font-family: $playfair;
+  font-size: 1em;
+}
+
+#addTaskButton, #resetButton {
+	background-color: $white;
+}
+
+#resetButton {
+	padding: 0.8em 1.4em;
+}
+
+#completeReset {
+	border: $buttonBorderStyle;
+  	border-radius: $buttonRadius;
+	background-color: $white;
+	padding: 0.8em 1.4em;
+	margin-top: 40px;
+}
+
+
+//----Icons----//
 .fa-tasks, .fa-thumbtack {
 	margin-right: 10px;
 }
 
-ul {
-list-style: none;
-margin-top: 20px;
-}
 
-li {
-	border-bottom: 1px solid black;
-	padding-top:10px;
-	margin-top: 10px;
-	font-size: 1.2em;
-}
-
-button {
-  background: none;
-  border: 1px solid rgba(179,204,255, 0.8);
-  border-radius: 5px;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 0.4em 0.8em;
-}
-
-#addTaskButton, #resetButton {
-	background-color: rgba(179,204,255, 0.5);
-}
-
-#completeReset {
-	border: 1px solid rgba(179,204,255, 0.8);
-  	border-radius: 5px;
-	background-color: white;
+//----Unicodes---//
+.close {
+	color: $black;
+	background-color: blue;
 }
 
 .done {
@@ -78,24 +119,11 @@ button {
   line-height: 1;
   margin: 0.5em;
   padding: 0.2em 0.8em;
+  background: $white;
 }
 
 
-.close {
-	color: black;
-}
-#todoForm {
-	text-align: center;
-	width: 90%;
-	margin: 10px auto;
-}
-
-
-input {
-	width: 300px;
-	height: 30px;
-	border: 1px solid;
-}
+//----Lists----//
 
 .todoList, .completeList {
 	width: 90%;
@@ -108,17 +136,19 @@ input {
 }
 
 .completedList {
-	background-color: rgb(179,204,255);
+	background-color:$completeListColor;
 	min-height: 500px;
 	padding-bottom: 20px;
 	border-top: 2px solid;
 }
 
 
+//----Footer---//
+
 footer {
 	height: 80px;
 	padding-top: 10px;
-	background-color: rgb(44, 43, 48);
+	background-color: $footerColor;
 }
 
 .githubLink {
@@ -127,6 +157,11 @@ footer {
 }
 
 footer a {
-	color:white;
+	color:$white;
 	font-size: 1.8em;
+	text-decoration: none !important;
+}
+
+a:hover {
+    color: $white;
 }

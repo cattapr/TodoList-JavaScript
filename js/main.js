@@ -1,4 +1,57 @@
-//    Global variables 
+
+
+//Current date format
+function renderTime () {
+
+	//Date variables
+	var mydate = new Date(); 
+	var year = mydate.getYear();
+		if(year < 1000){
+			year += 1900
+		}
+	var day = mydate.getDay();
+	var month = mydate.getMonth();
+	var daym = mydate.getDate();
+	var dayarray = new Array("Sunday,","Monday,","´Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,");
+	var montharray = new Array("January","February","March","April","May","June","July","August","September", "October","November","December")
+	// Date End
+
+	//Time 
+	var currentTime = new Date ();
+	var h = currentTime.getHours();
+	var m = currentTime.getMinutes();
+	var s = currentTime.getSeconds();
+		if(h == 24){
+			h = 0;
+		} else if(h > 12){
+			h = h - 0;
+		}
+
+		if(h < 10){
+			h = "0" + h;
+		}
+
+		if(m < 10){
+			m = "0" + m;
+		}
+
+		if(s < 10){
+			s = "0" + s;
+		}
+
+		// end ifstatments with "0" to make it look digital
+
+		var myClock = document.getElementById("clockDisplay");
+		myClock.textContent = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+		myClock.innerText = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+
+		setTimeout("renderTime()", 1000);
+}
+renderTime();
+
+
+
+//    Global variables for creation of list
 var list = document.getElementById("todoList");
 var completeList = document.getElementById("completeList");
 
@@ -51,15 +104,6 @@ function todoList() {
 } //function todolist () ends here.
 
 
- var input = document.getElementById("taskInput");
-input.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addTaskButton").click();
-    }
-});
-
-
 //    Reset List
 function resetList() {        
     list.innerHTML = "";  
@@ -74,54 +118,14 @@ function resetCompleteList() {
 }
 
 
-//Current date format
-function renderTime () {
 
-	//Date variables
-	var mydate = new Date(); 
-	var year = mydate.getYear();
-		if(year < 1000){
-			year += 1900
-		}
-	var day = mydate.getDay();
-	var month = mydate.getMonth();
-	var daym = mydate.getDate();
-	var dayarray = new Array("Sunday,","Monday,","´Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,");
-	var montharray = new Array("January","February","March","April","May","June","July","August","September", "October","November","December")
-	// Date End
-
-	//Time 
-	var currentTime = new Date ();
-	var h = currentTime.getHours();
-	var m = currentTime.getMinutes();
-	var s = currentTime.getSeconds();
-		if(h == 24){
-			h = 0;
-		} else if(h > 12){
-			h = h - 0;
-		}
-
-		if(h < 10){
-			h = "0" + h;
-		}
-
-		if(m < 10){
-			m = "0" + m;
-		}
-
-		if(s < 10){
-			s = "0" + s;
-		}
-
-		// end ifstatments with "0" to make it look digital
-
-		var myClock = document.getElementById("clockDisplay");
-		myClock.textContent = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
-		myClock.innerText = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
-
-		setTimeout("renderTime()", 1000);
-}
-renderTime();
+ /*var input = document.getElementById("taskInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addTaskButton").click();
+    }
+});*/
 
 
 
